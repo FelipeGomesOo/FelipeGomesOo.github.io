@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Pacifico&display=swap');  
+
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+     
+} 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* SECTION 01 - BASE */
+
+html, body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+} 
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+strong, h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom:1rem;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    max-width: 35rem; 
+    display: inline-block;
+}
+
+p+p {
+    margin-top: 0.75rem;
+}
+
+.logo {
+    font-family:'Pacifico', cursive;
+    font-size: 2rem;
+}
+
+.header{
+    padding: 3rem 0 2rem 0   
+}
+
+.row { 
+    width: 100%;
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.image-row {
+    margin: 15% 0 5% 0;
+    background: url("https://images.unsplash.com/photo-1567752588693-ad10a647c5a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80") fixed no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+}
+
+/* SECTION 02 - Nav Bar */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    border-bottom:1px solid #dfd7ce;
+    transition: all 0.2s  ;
+}
+header.scrolling {
+    opacity: 0.1;
+}
+ 
+.header__nav {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.nav_link {
+    color:black;
+    flex: 1;
+    text-align: center;    
+    opacity: 0.75;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_link:hover {
+    font-weight: bold;
+    opacity: 1;
+}
+
+nav .logo { 
+    flex: 2; 
+}
+
+
+/* SECTION 03 - Main */
+main {
+    height: 100vh;
+    background: rgb(229,219,209);
+    background: linear-gradient(180deg, rgba(241,233,225,1) 0%, rgba(227,217,206,1) 40%, rgba(223,205,186,1) 57%, rgba(230,214,197,1) 60%, rgba(230,214,197,1) 100%);          
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+main .header{ 
+    flex-basis: 47rem;
+}
+
+.main__text{
+    position: absolute;
+    opacity: 0.9;
+    width: 100%;    
+    left: 0; 
+    color: #fff;
+    font-size: 10rem;
+    font-weight: 100;     
+    text-transform: uppercase;
+    line-height: 0.8;
+    overflow-wrap: break-word;
+}
+.main__text.rio-bakery{
+    text-align: left;
+    top: 20%;
+}
+.main__text.based-in-nyc{
+    text-align: right;
+    bottom: 0%;
+}
+
+/* SECTION 04 - Mission */
+#mission {
+    display: flex; 
+    justify-content:center; 
+    align-items: center;  
+    height: 100vh;
+    background-color: #e6d6c5;
+    position: relative;
+    overflow: hidden;
+    text-align: center;   
+} 
+#mission .logo{  
+    position: absolute;
+    bottom:-9rem;     
+    font-size: 18rem;
+    /* opacity: 0.3; */
+    text-shadow: 01px 20px 20px   #d3c0bc;
+    color:#e6d6c5;
+    left: 10rem;
+    width: 100%;
+}
+
+
+/* SECTION 05 - Bakery */
+#bakery {
+    padding-top: 5rem;
+}
+.bakery__product-list{
+    display: flex;
+    flex-flow: wrap; 
+    gap:0.75rem 1rem ;
+}
+.bakery__product{
+    flex: 1 15rem;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    height: auto;
+}
+.bakery__product figcaption {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+.bakery__product:hover figcaption{
+    bottom: 1rem;    
+    opacity: 1;
+    
+}
+/* SECTION 06 - Team */
+#team {
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+.team__list {
+    display: flex;
+    flex-flow: wrap; 
+    gap:1rem;
+}
+.team__member{
+    flex: 1 15rem;
+}
+/* SECTION 07 - Contact */
+#contact{
+    height: 100vh;
+    margin-top: 5%; 
+    display: flex;
+    align-items: stretch;    
+    background: #ebedec url("https://images.unsplash.com/photo-1559622214-f8a9850965bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2565&q=80") right bottom no-repeat; 
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact__header{
+    flex: 1; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    
+}
+
+.contact__copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;  
+    width: 100%; 
+    border-top: 1px solid #dfd7ce;  
+    padding: 1rem 0;   
+}
+.contact__copyright .row {
+    font-size: 0.75rem;
+    text-align: center;
+    
+}
+.contact__copyright .row a {
+    text-decoration: underline;     
+    color: black;
+}
+.contact__header { 
+    background: rgb(235,237,236);
+    background: linear-gradient(90deg, rgba(235,237,236,1) 40%, rgba(235,237,236,0) 100%);
+}
+.contact__header h6{
+    margin-bottom: 1rem;
+}
+.contact__header h2{
+    margin-bottom: 0;
+} 
+.contact__logo {
+    position: absolute;
+    left: -15rem;
+    font-size: 18rem;
+    opacity: 0.4;
+    color: #fff;
+    transform: rotate(90deg);
+    width: 100vh;
+}
+
+@media only screen and (max-width:420px) {
+    html {
+        font-size: 16px;        
+    } 
+     
+    .header__nav{
+         flex-wrap: wrap;
+    }    
+    .nav_link.logo{
+        font-size: 1.5rem;    
+        order: -1;
+        flex: 100%;
+    }
+    main .bread{
+         
+    } 
+    .main__text{
+        font-size: 7rem;
+    }
+    #mission {
+        height: 100vh;
+    }
+    #mission .logo{ 
+        font-size: 7rem;
+        bottom:-3rem;  
+        left: -2rem;
+    }
+    #contact{
+        background-position: center 100%  ;
+    }
+    .contact__header{
+        background: linear-gradient(180deg, rgba(235,237,236,1) 20%, rgba(235,237,236,0) 100%);
+        margin-top: -50%;
+    }
+    .contact__copyright {
+        background-color: rgb(255, 255, 255);
+        box-shadow:  0px -20px 20px 20px rgba(255, 255, 255, 0.514);
+        border-top:none ;
+    }
+    .contact__logo{
+        display: none;
+    }
+}
